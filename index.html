@@ -123,13 +123,31 @@
       margin-bottom: 12px;
     }
 
-    .hero-contact {
-      color: var(--muted);
-      font-size: 14px;
+    /* Hero contact strip */
+    .hero-contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 20px;
     }
 
-    .hero-contact a {
+    .hero-contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(44, 92, 140, 0.9);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-contact-label {
+      font-weight: 500;
+    }
+
+    .hero-contact-item a {
       color: var(--accent);
     }
 
@@ -230,24 +248,35 @@
       color: var(--muted);
     }
 
-    .contact-links {
+    /* Tools section */
+    .tools-logos {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      font-size: 14px;
+      gap: 16px;
     }
 
-    .contact-links a {
-      padding: 7px 13px;
-      border-radius: 999px;
+    .tool-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border-radius: 12px;
       background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(44, 92, 140, 0.9);
-      color: var(--muted);
+      border: 1px solid rgba(44, 107, 156, 0.7);
     }
 
-    .contact-links a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+    .tool-logo img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .tool-logo span {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
     }
 
     footer {
@@ -275,33 +304,56 @@
 <body>
   <div class="page">
     <header>
-      <div class="logo">Data Engineer</div>
+      <div class="logo">SPT Data Engineer</div>
       <nav>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#tools">Tools</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#education">Education</a>
       </nav>
     </header>
 
     <main>
-      <!-- Hero (content injected from hero.json + contact.json) -->
+      <!-- Hero -->
       <section class="hero" id="home">
         <div>
           <div class="hero-kicker" id="hero-kicker">
             <span class="hero-kicker-dot"></span>
-            <!-- kicker text here -->
+            <span id="hero-kicker-text"></span>
           </div>
           <h1 class="hero-title">
             Hi, I'm <span id="hero-name"></span>
           </h1>
           <p class="hero-subtitle-line" id="hero-tagline"></p>
           <p class="hero-subtitle" id="hero-summary"></p>
-          <p class="hero-contact" id="hero-contact-line"></p>
+
+          <div class="hero-contact-strip">
+            <div class="hero-contact-item">
+              <span class="hero-contact-label">Email:</span>
+              <a id="hero-email-link"></a>
+            </div>
+            <div class="hero-contact-item">
+              <span class="hero-contact-label">Phone:</span>
+              <a id="hero-phone-link"></a>
+            </div>
+            <div class="hero-contact-item">
+              <a id="hero-resume-link" target="_blank">Download resume</a>
+            </div>
+            <div class="hero-contact-item">
+              <a id="hero-linkedin-link" target="_blank">LinkedIn</a>
+            </div>
+            <div class="hero-contact-item">
+              <a href="#projects">Projects</a>
+            </div>
+          </div>
+
           <div class="hero-actions">
             <a class="btn-primary" href="#projects">View projects</a>
-            <a class="btn-ghost" href="#contact">Contact / Resume</a>
+            <a class="btn-ghost" href="#experience">View experience</a>
           </div>
         </div>
       </section>
@@ -313,13 +365,6 @@
         <div id="about-body"></div>
       </section>
 
-      <!-- Skills -->
-      <section id="skills">
-        <h2 class="section-heading">Skills</h2>
-        <p class="section-subtitle" id="skills-subtitle"></p>
-        <div class="section-grid" id="skills-grid"></div>
-      </section>
-
       <!-- Experience -->
       <section id="experience">
         <h2 class="section-heading">Experience</h2>
@@ -327,18 +372,39 @@
         <div class="section-grid" id="experience-grid"></div>
       </section>
 
-      <!-- Projects -->
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="section-heading">Skills</h2>
+        <p class="section-subtitle" id="skills-subtitle"></p>
+        <div class="section-grid" id="skills-grid"></div>
+      </section>
+
+      <!-- Tools -->
+      <section id="tools">
+        <h2 class="section-heading">Tools</h2>
+        <p class="section-subtitle" id="tools-subtitle"></p>
+        <div class="tools-logos" id="tools-logos"></div>
+      </section>
+
+      <!-- Featured projects -->
       <section id="projects">
         <h2 class="section-heading">Featured projects</h2>
         <p class="section-subtitle" id="projects-subtitle"></p>
         <div class="section-grid" id="projects-grid"></div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact">
-        <h2 class="section-heading">Contact</h2>
-        <p class="section-subtitle" id="contact-subtitle"></p>
-        <div class="contact-links" id="contact-links"></div>
+      <!-- Certificates -->
+      <section id="certificates">
+        <h2 class="section-heading">Certificates</h2>
+        <p class="section-subtitle" id="certificates-subtitle"></p>
+        <div class="section-grid" id="certificates-grid"></div>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2 class="section-heading">Education</h2>
+        <p class="section-subtitle" id="education-subtitle"></p>
+        <div class="section-grid" id="education-grid"></div>
       </section>
     </main>
 
@@ -348,7 +414,6 @@
   </div>
 
   <script>
-    // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
 
     async function loadJSON(path) {
@@ -376,16 +441,17 @@
       const title = document.createElement("div");
       title.className = "card-title";
       title.textContent = item.title;
+      card.appendChild(title);
 
-      const meta = document.createElement("div");
-      meta.className = "card-meta";
-      meta.textContent = item.meta;
+      if (item.meta) {
+        const meta = document.createElement("div");
+        meta.className = "card-meta";
+        meta.textContent = item.meta;
+        card.appendChild(meta);
+      }
 
       const text = document.createElement("p");
-      text.textContent = item.text;
-
-      card.appendChild(title);
-      card.appendChild(meta);
+      text.textContent = item.text || "";
       card.appendChild(text);
 
       if (item.chips && Array.isArray(item.chips) && item.chips.length > 0) {
@@ -409,43 +475,42 @@
       const contact = await loadJSON("content/contact.json");
 
       if (hero) {
-        const kickerEl = document.getElementById("hero-kicker");
-        kickerEl.lastChild && (kickerEl.lastChild.textContent = " " + hero.kicker);
-
-        document.getElementById("hero-name").textContent = hero.name;
-        document.getElementById("hero-tagline").textContent = hero.tagline;
-        document.getElementById("hero-summary").textContent = hero.summary;
+        document.getElementById("hero-kicker-text").textContent = hero.kicker || "";
+        document.getElementById("hero-name").textContent = hero.name || "";
+        document.getElementById("hero-tagline").textContent = hero.tagline || "";
+        document.getElementById("hero-summary").textContent = hero.summary || "";
       }
 
       if (contact) {
-        const contactLine = document.getElementById("hero-contact-line");
-        contactLine.innerHTML =
-          `<a href="mailto:${contact.email}">${contact.email}</a>` +
-          ` · <a href="tel:${contact.phoneHref}">${contact.phone}</a>`;
+        // Email
+        const emailLink = document.getElementById("hero-email-link");
+        emailLink.href = `mailto:${contact.email}`;
+        emailLink.textContent = contact.email;
+
+        // Phone
+        const phoneLink = document.getElementById("hero-phone-link");
+        phoneLink.href = `tel:${contact.phoneHref}`;
+        phoneLink.textContent = contact.phone;
+
+        // Resume pill
+        const resumeLink = document.getElementById("hero-resume-link");
+        resumeLink.href = contact.resume;
+
+        // LinkedIn pill
+        const liLink = document.getElementById("hero-linkedin-link");
+        liLink.href = contact.linkedin;
       }
 
       // About
       const about = await loadJSON("content/about.json");
       if (about) {
-        document.getElementById("about-subtitle").textContent = "";
+        document.getElementById("about-subtitle").textContent = about.subtitle || "";
         const aboutBody = document.getElementById("about-body");
         aboutBody.innerHTML = "";
         (about.paragraphs || []).forEach((txt, idx) => {
           const p = createParagraph(txt);
           if (idx === 0) p.style.marginTop = "0";
           aboutBody.appendChild(p);
-        });
-      }
-
-      // Skills
-      const skills = await loadJSON("content/skills.json");
-      if (skills) {
-        document.getElementById("skills-subtitle").textContent = skills.subtitle || "";
-        const grid = document.getElementById("skills-grid");
-        grid.innerHTML = "";
-        (skills.items || []).forEach(item => {
-          const card = createCard(item);
-          grid.appendChild(card);
         });
       }
 
@@ -461,6 +526,49 @@
         });
       }
 
+      // Skills + Tools
+      const skills = await loadJSON("content/skills.json");
+      if (skills) {
+        document.getElementById("skills-subtitle").textContent = skills.subtitle || "";
+        const skillsGrid = document.getElementById("skills-grid");
+        skillsGrid.innerHTML = "";
+        (skills.categories || []).forEach(cat => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const title = document.createElement("div");
+          title.className = "card-title";
+          title.textContent = cat.title;
+
+          const text = document.createElement("p");
+          text.textContent = cat.text;
+
+          card.appendChild(title);
+          card.appendChild(text);
+          skillsGrid.appendChild(card);
+        });
+
+        document.getElementById("tools-subtitle").textContent =
+          skills.toolsSubtitle || "Core platforms and frameworks I use.";
+        const toolsContainer = document.getElementById("tools-logos");
+        toolsContainer.innerHTML = "";
+        (skills.logos || []).forEach(tool => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "tool-logo";
+
+          const img = document.createElement("img");
+          img.src = tool.img;
+          img.alt = tool.name;
+
+          const label = document.createElement("span");
+          label.textContent = tool.name;
+
+          wrapper.appendChild(img);
+          wrapper.appendChild(label);
+          toolsContainer.appendChild(wrapper);
+        });
+      }
+
       // Projects
       const projects = await loadJSON("content/projects.json");
       if (projects) {
@@ -473,39 +581,28 @@
         });
       }
 
-      // Contact
-      if (contact) {
-        document.getElementById("contact-subtitle").textContent = contact.subtitle || "";
-        const links = document.getElementById("contact-links");
-        links.innerHTML = "";
+      // Certificates
+      const certs = await loadJSON("content/certificates.json");
+      if (certs) {
+        document.getElementById("certificates-subtitle").textContent = certs.subtitle || "";
+        const grid = document.getElementById("certificates-grid");
+        grid.innerHTML = "";
+        (certs.items || []).forEach(item => {
+          const card = createCard(item);
+          grid.appendChild(card);
+        });
+      }
 
-        const emailLink = document.createElement("a");
-        emailLink.href = `mailto:${contact.email}`;
-        emailLink.textContent = `Email: ${contact.email}`;
-        links.appendChild(emailLink);
-
-        const phoneLink = document.createElement("a");
-        phoneLink.href = `tel:${contact.phoneHref}`;
-        phoneLink.textContent = `Phone: ${contact.phone}`;
-        links.appendChild(phoneLink);
-
-        const liLink = document.createElement("a");
-        liLink.href = contact.linkedin;
-        liLink.target = "_blank";
-        liLink.textContent = "LinkedIn";
-        links.appendChild(liLink);
-
-        const resumeLink = document.createElement("a");
-        resumeLink.href = contact.resume;
-        resumeLink.target = "_blank";
-        resumeLink.textContent = "Download Resume";
-        links.appendChild(resumeLink);
-
-        const ghLink = document.createElement("a");
-        ghLink.href = contact.github;
-        ghLink.target = "_blank";
-        ghLink.textContent = "GitHub";
-        links.appendChild(ghLink);
+      // Education
+      const edu = await loadJSON("content/education.json");
+      if (edu) {
+        document.getElementById("education-subtitle").textContent = edu.subtitle || "";
+        const grid = document.getElementById("education-grid");
+        grid.innerHTML = "";
+        (edu.items || []).forEach(item => {
+          const card = createCard(item);
+          grid.appendChild(card);
+        });
       }
     }
 
