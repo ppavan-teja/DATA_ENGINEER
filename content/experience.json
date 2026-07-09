@@ -1,0 +1,25 @@
+{
+  "subtitle": "Recent roles delivering production data platforms, pipelines, and analytics solutions.",
+  "items": [
+    {
+      "title": "Comerica Bank – Data Engineer",
+      "meta": "Aug 2023 – Present · Snowflake, IICS, DBT, Databricks, AWS, Airflow",
+      "text": "Design and operate a Snowflake‑based banking data platform integrating AFS Vision, Treasury, Commercial Loans, and Consumer Loans. Build IICS‑orchestrated ETL/ELT pipelines, DBT models, and Airflow jobs for enterprise reporting and risk analytics. Implement security alerting, Snowflake usage monitoring, cost optimization, and AI‑assisted workflows using Snowflake Cortex, Document AI, and Python automation."
+    },
+    {
+      "title": "Sunflower IT – Data Engineer",
+      "meta": "Jul 2020 – Dec 2021 · Snowflake, IICS, SQL Server",
+      "text": "Developed end‑to‑end IICS Data Integration pipelines to migrate SQL Server sources into Snowflake. Designed optimized schemas, staging and warehouse layers, and bulk‑loading workflows using SnowSQL. Tuned performance with clustering, warehouse sizing, and Time Travel/Zero‑Copy Cloning for recovery, testing, and environment management."
+    },
+    {
+      "title": "Vistara Informatics – Jr. ETL Developer",
+      "meta": "Jul 2019 – Jun 2020 · IICS, Snowflake",
+      "text": "Helped build IICS pipelines that ingest flat files and relational sources into Snowflake staging and warehouse tables. Implemented incremental loads and SCD Type 1 & 2 dimensions, basic SQL validation routines, and monitoring using IICS logs and Snowflake history for reliable reporting data."
+    },
+    {
+      "title": "Tricode Info Solutions – Jr. SQL Developer",
+      "meta": "Jan 2018 – Jul 2019 · MySQL, SQL",
+      "text": "Contributed to data backends for web and fintech applications using MySQL. Wrote ETL queries and scripts, designed tables, views, and indexes, and supported data migration, cleansing, and validation to improve data quality for downstream analytics and applications."
+    }
+  ]
+}

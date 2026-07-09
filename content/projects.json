@@ -1,0 +1,36 @@
+{
+  "subtitle": "A selection of real-world data platforms and tools I've delivered.",
+  "items": [
+    {
+      "title": "Enterprise Snowflake Data Platform",
+      "meta": "Snowflake, IICS, DBT, AWS",
+      "text": "Designed and built a Snowflake warehouse integrating multiple enterprise data sources and delivering curated, governed datasets for analytics and reporting teams.",
+      "chips": ["End‑to‑end ETL/ELT", "Medallion architecture", "Governed access"]
+    },
+    {
+      "title": "Snowflake Cost & Usage Monitor",
+      "meta": "Streamlit, Snowflake logs, Airflow",
+      "text": "Built Streamlit dashboards and Airflow pipelines to export and analyze Snowflake usage and query logs, with SLA‑based alerting and automated tickets. Improved pipeline reliability and reduced compute costs by tuning warehouses and clustering strategies.",
+      "chips": ["Streamlit", "Monitoring & alerts", "Cost optimization"]
+    },
+    {
+      "title": "Security & Governance Automation",
+      "meta": "Snowflake stored procedures, Python",
+      "text": "Implemented automated security alerting using Snowflake stored procedures to detect schema changes, network policy updates, and role escalations. Integrated alerts with tickets and notifications to enforce governance across banking datasets.",
+      "chips": ["Governance", "Automation"]
+    },
+    {
+      "title": "SQL Server → Snowflake Migration",
+      "meta": "IICS, SnowSQL, Snowflake",
+      "text": "Migrated SQL Server sources into Snowflake using IICS mappings, mapping tasks, and taskflows. Designed optimized Snowflake schemas, staging and warehouse layers, and bulk loading flows to deliver reliable, performant reporting datasets.",
+      "chips": ["Migration", "IICS", "Performance tuning"]
+    },
+    {
+      "title": "Banking Data Platform for Finance & Risk",
+      "meta": "Snowflake, IICS, DBT, Databricks",
+      "text": "Built and supported a Snowflake cloud data warehouse for banking datasets such as AFS Vision, Treasury, Commercial Loans, and Consumer Loans. Used IICS and DBT to deliver analytics‑ready models for finance and risk teams, codifying business logic and improving transparency.",
+      "chips": ["Banking data", "DBT models", "Risk analytics"]
+    }
+
+  ]
+}

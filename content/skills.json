@@ -1,0 +1,25 @@
+{
+  "subtitle": "A focused stack for building and operating modern data platforms.",
+  "items": [
+    {
+      "title": "Cloud Warehouses",
+      "meta": "Snowflake, AWS, Azure",
+      "text": "Snowflake Snowpipe, Streams, Tasks, Time Travel, Zero‑Copy Cloning, RBAC, external tables, dynamic tables, secure views, data sharing, AWS S3 & Lambda, and Azure for cloud‑native data platforms."
+    },
+    {
+      "title": "Data Engineering",
+      "meta": "IICS, DBT, Databricks, Airflow",
+      "text": "IICS mappings & taskflows, DBT models and data marts, PySpark on Databricks, and Airflow‑orchestrated SQL/Python pipelines for end‑to‑end ETL/ELT and automation."
+    },
+    {
+      "title": "Modeling & Data Quality",
+      "meta": "Data modeling, governance, observability, data quality",
+      "text": "Star and snowflake schemas, medallion and lakehouse patterns, governance and access practices, monitoring of pipelines, and checks that keep data accurate and reliable for analytics."
+    },
+    {
+      "title": "Programming & BI",
+      "meta": "SQL, Python, Streamlit, BI tools",
+      "text": "SQL / PL‑SQL, Python automation and validation scripts, Streamlit dashboards, and BI tools like Tableau and Power BI for reporting and platform observability."
+    }
+  ]
+}

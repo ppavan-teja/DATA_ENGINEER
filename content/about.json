@@ -1,0 +1,6 @@
+{
+  "paragraphs": [
+    "I'm a Data Engineer with 6 years of experience designing, building, and supporting cloud data solutions using AWS, Azure, Snowflake, DBT, Databricks, Airflow, and IICS. I build end‑to‑end ETL/ELT pipelines, cloud data warehouses, and data models that serve analytics, reporting, and risk use cases across multiple domains.",
+    "Alongside core data engineering, I work across data modeling, data governance, observability, and data quality, helping teams structure, manage, and monitor their data so it stays accurate and trustworthy for different stakeholders. I've worked with diverse sources like SQL Server, Oracle, MySQL, Salesforce, DynamoDB, and file‑based formats (CSV, JSON, Parquet), integrating them into modern lakehouse and medallion architectures. I also have hands‑on experience with BI tools like Tableau, Power BI, and Streamlit to build monitoring and analytics dashboards on top of these platforms."
+  ]
+}
