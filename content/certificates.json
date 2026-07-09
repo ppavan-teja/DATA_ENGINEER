@@ -1,0 +1,20 @@
+{
+  "subtitle": "Certifications in Snowflake, AWS, and Databricks that support my data platform work.",
+  "items": [
+    {
+      "title": "Snowflake SnowPro Core",
+      "meta": "Snowflake · ID S0028228",
+      "text": "Validated knowledge of Snowflake architecture, data loading, performance optimization, security, and best practices across production data warehouses."
+    },
+    {
+      "title": "AWS Certified Cloud Practitioner",
+      "meta": "AWS · ID AWS04327560",
+      "text": "Demonstrated understanding of AWS cloud concepts, core services, security, and cost management relevant to data and analytics platforms."
+    },
+    {
+      "title": "Databricks Certified Data Engineer Associate",
+      "meta": "Databricks · ID 160297574",
+      "text": "Proven ability to build data pipelines and transformations on Databricks using Spark, Delta Lake, and best practices for data engineering on the lakehouse."
+    }
+  ]
+}

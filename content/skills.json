@@ -1,25 +1,43 @@
 {
-  "subtitle": "A focused stack for building and operating modern data platforms.",
-  "items": [
+  "subtitle": "Capabilities for building and operating modern data platforms.",
+  "categories": [
     {
       "title": "Cloud Warehouses",
-      "meta": "Snowflake, AWS, Azure",
       "text": "Snowflake Snowpipe, Streams, Tasks, Time Travel, Zero‑Copy Cloning, RBAC, external tables, dynamic tables, secure views, data sharing, AWS S3 & Lambda, and Azure for cloud‑native data platforms."
     },
     {
       "title": "Data Engineering",
-      "meta": "IICS, DBT, Databricks, Airflow",
       "text": "IICS mappings & taskflows, DBT models and data marts, PySpark on Databricks, and Airflow‑orchestrated SQL/Python pipelines for end‑to‑end ETL/ELT and automation."
     },
     {
       "title": "Modeling & Data Quality",
-      "meta": "Data modeling, governance, observability, data quality",
       "text": "Star and snowflake schemas, medallion and lakehouse patterns, governance and access practices, monitoring of pipelines, and checks that keep data accurate and reliable for analytics."
     },
     {
       "title": "Programming & BI",
-      "meta": "SQL, Python, Streamlit, BI tools",
       "text": "SQL / PL‑SQL, Python automation and validation scripts, Streamlit dashboards, and BI tools like Tableau and Power BI for reporting and platform observability."
     }
+  ],
+  "toolsSubtitle": "Core platforms and frameworks I use.",
+  "logos": [
+    { "name": "AWS", "img": "icons/AWS.png" },
+    { "name": "Azure", "img": "icons/Azure.png" },
+    { "name": "GCP", "img": "icons/google-cloud.png" },
+    { "name": "AWS Lambda", "img": "icons/Amazon_Lambda.png" },
+    { "name": "Snowflake", "img": "icons/snowflake.png" },
+    { "name": "Python", "img": "icons/python.png" },
+    { "name": "SQL", "img": "icons/sql.png" },
+    { "name": "Apache Airflow", "img": "icons/apache-airflow.png" },
+    { "name": "DBT", "img": "icons/dbt.png" },
+    { "name": "Databricks", "img": "icons/Databricks_Logo.png" },
+    { "name": "Data Factory", "img": "icons/ADF.jpeg" },
+    { "name": "IDMC", "img": "icons/IICS.png" },
+    { "name": "Tableau", "img": "icons/tableau.png" },
+    { "name": "Power BI", "img": "icons/Power-BI.png" },
+    { "name": "SageMaker", "img": "icons/sage_maker.png" },
+    { "name": "Share Point", "img": "icons/sharepoint.png" },
+    { "name": "DynamoDB", "img": "icons/DynamoDB.png" },
+    { "name": "SQL Server", "img": "icons/sql_server.png" }
+
   ]
 }
