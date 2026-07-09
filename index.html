@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sree Pavan Teja – Data Engineer</title>
+  <style>
+    :root {
+      --bg: #102a43;
+      --bg-alt: #163d5f;
+      --accent: #4fb8ff;
+      --accent-soft: rgba(79, 184, 255, 0.22);
+      --text: #f9fafb;
+      --muted: #b8c7d9;
+      --card-bg: #183c60;
+      --border: #2c5f8a;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      font-size: 15px;
+      background: radial-gradient(circle at top, var(--bg-alt) 0, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: block;
+      padding: 26px 24px 24px 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, var(--accent-soft), transparent 55%),
+        radial-gradient(circle at top left, var(--bg-alt) 0, var(--bg) 55%);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.8);
+      margin-bottom: 40px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .hero-kicker-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4.5vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle-line {
+      font-size: clamp(22px, 2.8vw, 26px);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .hero-contact {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-contact a {
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0b1120;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    .section-heading {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 14px;
+      border: 1px solid rgba(44, 107, 156, 0.7);
+      padding: 16px 16px 14px;
+      font-size: 18px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 19px;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(81, 117, 164, 0.85);
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .contact-links a {
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(44, 92, 140, 0.9);
+      color: var(--muted);
+    }
+
+    .contact-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav {
+        font-size: 14px;
+      }
+      .hero {
+        padding: 20px 16px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">SPT Data Engineer</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero (content injected from hero.json + contact.json) -->
+      <section class="hero" id="home">
+        <div>
+          <div class="hero-kicker" id="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <!-- kicker text here -->
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span id="hero-name"></span>
+          </h1>
+          <p class="hero-subtitle-line" id="hero-tagline"></p>
+          <p class="hero-subtitle" id="hero-summary"></p>
+          <p class="hero-contact" id="hero-contact-line"></p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#projects">View projects</a>
+            <a class="btn-ghost" href="#contact">Contact / Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <h2 class="section-heading">About</h2>
+        <p class="section-subtitle" id="about-subtitle"></p>
+        <div id="about-body"></div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="section-heading">Skills</h2>
+        <p class="section-subtitle" id="skills-subtitle"></p>
+        <div class="section-grid" id="skills-grid"></div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="section-heading">Experience</h2>
+        <p class="section-subtitle" id="experience-subtitle"></p>
+        <div class="section-grid" id="experience-grid"></div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-heading">Featured projects</h2>
+        <p class="section-subtitle" id="projects-subtitle"></p>
+        <div class="section-grid" id="projects-grid"></div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="section-heading">Contact</h2>
+        <p class="section-subtitle" id="contact-subtitle"></p>
+        <div class="contact-links" id="contact-links"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="year"></span> · Sree Pavan Teja · Built with HTML & CSS
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    async function loadJSON(path) {
+      const res = await fetch(path);
+      if (!res.ok) {
+        console.error("Failed to load", path, res.status);
+        return null;
+      }
+      return res.json();
+    }
+
+    function createParagraph(text) {
+      const p = document.createElement("p");
+      p.style.fontSize = "15px";
+      p.style.color = "var(--muted)";
+      p.style.marginTop = "8px";
+      p.textContent = text;
+      return p;
+    }
+
+    function createCard(item) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const title = document.createElement("div");
+      title.className = "card-title";
+      title.textContent = item.title;
+
+      const meta = document.createElement("div");
+      meta.className = "card-meta";
+      meta.textContent = item.meta;
+
+      const text = document.createElement("p");
+      text.textContent = item.text;
+
+      card.appendChild(title);
+      card.appendChild(meta);
+      card.appendChild(text);
+
+      if (item.chips && Array.isArray(item.chips) && item.chips.length > 0) {
+        const chipRow = document.createElement("div");
+        chipRow.className = "chip-row";
+        item.chips.forEach(ch => {
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          chip.textContent = ch;
+          chipRow.appendChild(chip);
+        });
+        card.appendChild(chipRow);
+      }
+
+      return card;
+    }
+
+    async function init() {
+      // Hero + contact
+      const hero = await loadJSON("content/hero.json");
+      const contact = await loadJSON("content/contact.json");
+
+      if (hero) {
+        const kickerEl = document.getElementById("hero-kicker");
+        kickerEl.lastChild && (kickerEl.lastChild.textContent = " " + hero.kicker);
+
+        document.getElementById("hero-name").textContent = hero.name;
+        document.getElementById("hero-tagline").textContent = hero.tagline;
+        document.getElementById("hero-summary").textContent = hero.summary;
+      }
+
+      if (contact) {
+        const contactLine = document.getElementById("hero-contact-line");
+        contactLine.innerHTML =
+          `San Antonio, TX · ` +
+          `<a href="mailto:${contact.email}">${contact.email}</a>` +
+          ` · <a href="tel:${contact.phoneHref}">${contact.phone}</a>`;
+      }
+
+      // About
+      const about = await loadJSON("content/about.json");
+      if (about) {
+        document.getElementById("about-subtitle").textContent = "";
+        const aboutBody = document.getElementById("about-body");
+        aboutBody.innerHTML = "";
+        (about.paragraphs || []).forEach((txt, idx) => {
+          const p = createParagraph(txt);
+          if (idx === 0) p.style.marginTop = "0";
+          aboutBody.appendChild(p);
+        });
+      }
+
+      // Skills
+      const skills = await loadJSON("content/skills.json");
+      if (skills) {
+        document.getElementById("skills-subtitle").textContent = skills.subtitle || "";
+        const grid = document.getElementById("skills-grid");
+        grid.innerHTML = "";
+        (skills.items || []).forEach(item => {
+          const card = createCard(item);
+          grid.appendChild(card);
+        });
+      }
+
+      // Experience
+      const experience = await loadJSON("content/experience.json");
+      if (experience) {
+        document.getElementById("experience-subtitle").textContent = experience.subtitle || "";
+        const grid = document.getElementById("experience-grid");
+        grid.innerHTML = "";
+        (experience.items || []).forEach(item => {
+          const card = createCard(item);
+          grid.appendChild(card);
+        });
+      }
+
+      // Projects
+      const projects = await loadJSON("content/projects.json");
+      if (projects) {
+        document.getElementById("projects-subtitle").textContent = projects.subtitle || "";
+        const grid = document.getElementById("projects-grid");
+        grid.innerHTML = "";
+        (projects.items || []).forEach(item => {
+          const card = createCard(item);
+          grid.appendChild(card);
+        });
+      }
+
+      // Contact
+      if (contact) {
+        document.getElementById("contact-subtitle").textContent = contact.subtitle || "";
+        const links = document.getElementById("contact-links");
+        links.innerHTML = "";
+
+        const emailLink = document.createElement("a");
+        emailLink.href = `mailto:${contact.email}`;
+        emailLink.textContent = `Email: ${contact.email}`;
+        links.appendChild(emailLink);
+
+        const phoneLink = document.createElement("a");
+        phoneLink.href = `tel:${contact.phoneHref}`;
+        phoneLink.textContent = `Phone: ${contact.phone}`;
+        links.appendChild(phoneLink);
+
+        const liLink = document.createElement("a");
+        liLink.href = contact.linkedin;
+        liLink.target = "_blank";
+        liLink.textContent = "LinkedIn";
+        links.appendChild(liLink);
+
+        const resumeLink = document.createElement("a");
+        resumeLink.href = contact.resume;
+        resumeLink.target = "_blank";
+        resumeLink.textContent = "Download Resume";
+        links.appendChild(resumeLink);
+
+        const ghLink = document.createElement("a");
+        ghLink.href = contact.github;
+        ghLink.target = "_blank";
+        ghLink.textContent = "GitHub";
+        links.appendChild(ghLink);
+      }
+    }
+
+    init().catch(err => console.error("Init error", err));
+  </script>
+</body>
+</html>
